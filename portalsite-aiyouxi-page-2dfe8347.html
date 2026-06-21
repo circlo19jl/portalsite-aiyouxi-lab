@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 产品说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f7f5f0;
+            font-family: "Noto Serif SC", "Source Han Serif CN", "Times New Roman", serif;
+            color: #2c2b28;
+            line-height: 1.75;
+            padding: 2.5rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .page {
+            max-width: 820px;
+            width: 100%;
+        }
+
+        /* 文章排版基调 */
+        h1, h2, h3 {
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #1f1e1c;
+            margin-top: 1.8em;
+            margin-bottom: 0.6em;
+        }
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-top: 0.4em;
+            margin-bottom: 0.2em;
+            font-weight: 400;
+            border-bottom: 1px solid #d6d0c4;
+            padding-bottom: 0.4em;
+        }
+        h2 {
+            font-size: 1.5rem;
+            border-left: 4px solid #b3a898;
+            padding-left: 0.8rem;
+        }
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        p {
+            margin-bottom: 1.25em;
+            text-indent: 2em;
+        }
+        p:first-of-type {
+            text-indent: 0;
+        }
+
+        /* 引用块 / 提示框 */
+        .callout {
+            background: #eeebe4;
+            border-left: 6px solid #b3a898;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: normal;
+            color: #3b3a36;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+        }
+        .callout p {
+            margin-bottom: 0.4em;
+            text-indent: 0;
+        }
+        .callout p:last-child {
+            margin-bottom: 0;
+        }
+        .callout strong {
+            font-weight: 600;
+            color: #2c2b28;
+        }
+
+        /* 卡片式亮点 */
+        .highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 2rem 0 1.5rem;
+        }
+        .highlight-item {
+            flex: 1 1 220px;
+            background: #ffffffd9;
+            padding: 1.2rem 1.4rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            border: 1px solid #e3ddd2;
+            transition: all 0.2s ease;
+        }
+        .highlight-item:hover {
+            background: #ffffff;
+            border-color: #c7bcaa;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+        }
+        .highlight-item h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
+            border-left: none;
+            padding-left: 0;
+        }
+        .highlight-item p {
+            text-indent: 0;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* 场景列表 */
+        .scene-list {
+            list-style: none;
+            padding-left: 0.2rem;
+            margin: 1.2rem 0 1.8rem;
+        }
+        .scene-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.7rem;
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+        .scene-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0.4rem;
+            color: #8f8475;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        /* 链接 */
+        a {
+            color: #5b5a55;
+            text-decoration: none;
+            border-bottom: 1px solid #cbc1b2;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        a:hover {
+            color: #2c2b28;
+            border-bottom-color: #2c2b28;
+        }
+
+        /* FAQ 摘要 */
+        .faq-item {
+            margin: 1.4rem 0;
+            padding: 0.2rem 0;
+        }
+        .faq-q {
+            font-weight: 500;
+            font-size: 1.05rem;
+            margin-bottom: 0.2rem;
+            color: #3f3d39;
+        }
+        .faq-a {
+            font-size: 0.97rem;
+            color: #54524c;
+            padding-left: 0.5rem;
+            border-left: 2px solid #dbd4c8;
+            padding-left: 1rem;
+            margin-top: 0.1rem;
+        }
+
+        /* 底部 */
+        .footer-note {
+            margin-top: 3.5rem;
+            padding-top: 1.6rem;
+            border-top: 1px solid #ddd8ce;
+            font-size: 0.88rem;
+            color: #6f6b63;
+            text-align: center;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body { padding: 1.5rem 0.8rem; }
+            h1 { font-size: 1.7rem; }
+            .highlights { flex-direction: column; }
+            .highlight-item { flex: 1 1 auto; }
+            .callout { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <h1>爱游戏 · 产品说明</h1>
+
+    <p style="text-indent:0; font-size:0.95rem; color:#5f5c56; text-align:center; margin-bottom:2rem;">
+        温和 · 持续 · 有据可循
+    </p>
+
+    <!-- 摘要 -->
+    <p>
+        如果你曾经访问过 <a href="https://portalsite-aiyouxi.com.cn">爱游戏</a>，应该对它的结构留有印象——一个围绕游戏内容组织的信息站点，不追求浮夸的界面，更看重内容的可读性与导航的清晰度。本文从使用者的视角，梳理当前产品的核心面貌，以及适合哪些场景再次打开它、又有哪些细节值得留意。
+    </p>
+
+    <!-- 从再次访问的角度展开 -->
+    <h2>为何值得再次打开</h2>
+    <p>
+        网站本身不依赖推送或强提醒，因此再次访问完全取决于你是否有主动查找、回顾或比较的需求。就我们观察，不少用户会在周末或新游戏发布前后重新打开 <a href="https://portalsite-aiyouxi.com.cn">爱游戏</a>，原因是它提供了一种相对沉静的浏览环境——广告干扰较少，信息组织偏重分类与索引，适合有明确目的或轻度探索的访客。
+    </p>
+    <p>
+        为方便回访，建议在浏览器书签栏保留对应页面，或直接收藏主域名。如果你习惯使用阅读列表，也可以将核心栏目添加至稍后阅读工具，以便在碎片时间里快速跟进。
+    </p>
+
+    <!-- 亮点卡片 -->
+    <h2>当前版本的几个特点</h2>
+    <div class="highlights">
+        <div class="highlight-item">
+            <h3>内容归类</h3>
+            <p>按照游戏类型、平台、题材划分板块，减少无关信息的干扰。无论你是回顾经典还是关注新作，都能较快定位。</p>
+        </div>
+        <div class="highlight-item">
+            <h3>低密度广告</h3>
+            <p>页面中不包含弹窗、浮层或自动播放内容，浏览节奏由你控制。这也是很多用户愿意持续使用的原因之一。</p>
+        </div>
+        <div class="highlight-item">
+            <h3>持续更新</h3>
+            <p>虽然更新频率不追求日更，但每次内容调整都会根据用户反馈和游戏行业动态进行，保持信息的实际参考价值。</p>
+        </div>
+    </div>
+
+    <!-- 使用建议 / 场景 -->
+    <h2>适合的使用场景</h2>
+    <ul class="scene-list">
+        <li><strong>资料查阅：</strong>对某款游戏的背景、版本差异或媒体评价做交叉对比时，可以作为信息源之一。</li>
+        <li><strong>轻度浏览：</strong>在午休、通勤等碎片时间里，随机翻阅某个分类下的文章或列表，不追求效率，只为了解。</li>
+        <li><strong>个人记录：</strong>如果你有记录自己游戏经历的习惯，可以参考站内的分类方式或描述用语。</li>
+        <li><strong>收藏与回顾：</strong>将感兴趣的内容页面添加至书签，后续再次打开时网站结构通常保持稳定，不会频繁改版。</li>
+    </ul>
+
+    <!-- 引用块 提示 -->
+    <div class="callout">
+        <p><strong>一个温和的提醒</strong></p>
+        <p>任何网站都有其内容边界和时效性。<a href="https://portalsite-aiyouxi.com.cn">爱游戏</a> 本身不对游戏下载、充值、账户交易等环节提供直接服务，也不对第三方链接的完整性负责。如果你需要购买或下载具体游戏，请前往对应的官方数字商店或开发商页面。保持信息交叉验证的习惯，总是有益的。</p>
+    </div>
+
+    <!-- FAQ 摘要 (非完整FAQ, 仅摘要式) -->
+    <h2>常见疑问摘要</h2>
+    <div class="faq-item">
+        <div class="faq-q">网站内容多久更新一次？</div>
+        <div class="faq-a">没有固定周期，通常每月会有 2-4 次更新。更新内容会体现在首页列表或分类板块中，你可以通过关注站点地图了解最新变化。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">是否需要注册或登录？</div>
+        <div class="faq-a">完全不需要。当前所有公开内容均可直接浏览，不设用户系统，也不会要求提供个人信息。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">移动端浏览体验如何？</div>
+        <div class="faq-a">页面采用响应式布局，在手机和平板上均能正常阅读。不过部分表格或列表在窄屏下会重新排列，建议横屏查看复杂内容。</div>
+    </div>
+
+    <!-- 结尾段落，含必要链接 -->
+    <p style="margin-top:2rem;">
+        如果你尚未访问过，或想重新了解站点全貌，可以直接打开 <a href="https://portalsite-aiyouxi.com.cn">爱游戏</a> 首页。我们建议你在首次浏览时先逛一遍导航栏，看看哪些栏目符合你的兴趣，再决定是否将其加入书签。保持收藏、保持关注，但不必过度期待——它只是一个安静的游戏内容站点，仅此而已。
+    </p>
+
+    <div class="footer-note">
+        <p style="text-indent:0; margin-bottom:0;">© 爱游戏 · 产品说明页 · 内容仅供参考</p>
+    </div>
+
+</div>
+</body>
+</html>
