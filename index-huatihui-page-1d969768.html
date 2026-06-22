@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华体会 · 运动与热忱的汇聚</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #fbe9e7 0%, #fef3e9 40%, #fff4e0 100%);
+            font-family: 'Segoe UI', 'PingFang SC', Roboto, 'Helvetica Neue', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.2rem;
+        }
+
+        .page-card {
+            max-width: 1160px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(6px);
+            border-radius: 48px;
+            padding: 2.8rem 2.2rem;
+            box-shadow: 0 25px 40px -18px rgba(180, 120, 70, 0.25);
+            transition: all 0.25s ease;
+        }
+
+        /* hero 区 */
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #6d3c1f;
+            background: linear-gradient(130deg, #a6562a, #c97f4b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #634b38;
+            max-width: 680px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* 主视觉 — 暖色装饰块 */
+        .visual-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            justify-content: center;
+            margin: 2.5rem 0 2.2rem;
+        }
+
+        .visual-item {
+            background: #fadbc8;
+            border-radius: 60px 20px 60px 20px;
+            padding: 1.2rem 2.2rem;
+            font-weight: 500;
+            color: #4d2f1c;
+            font-size: 1rem;
+            box-shadow: 0 6px 0 #dbaa84;
+            transition: 0.2s transform;
+            flex: 0 1 auto;
+        }
+
+        .visual-item:nth-child(2) {
+            background: #f5cdb4;
+            border-radius: 30px 60px 30px 60px;
+            box-shadow: 0 6px 0 #cb916b;
+        }
+
+        .visual-item:nth-child(3) {
+            background: #f0bfa2;
+            border-radius: 50px 18px 50px 18px;
+            box-shadow: 0 6px 0 #b87a58;
+        }
+
+        .visual-item:hover {
+            transform: translateY(-3px);
+        }
+
+        /* 用途卡片区 */
+        .section-title {
+            font-size: 1.7rem;
+            font-weight: 500;
+            color: #5a3b26;
+            border-left: 8px solid #d38d61;
+            padding-left: 1rem;
+            margin: 2.4rem 0 1.4rem;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.6rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 1.8rem 1.5rem;
+            box-shadow: 0 8px 16px rgba(170, 110, 60, 0.08);
+            transition: 0.2s all;
+            border: 1px solid #ffe9db;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            box-shadow: 0 14px 28px rgba(150, 90, 45, 0.13);
+            border-color: #eccbb8;
+            transform: scale(1.01);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #764a2b;
+            margin-bottom: 0.6rem;
+        }
+
+        .card p {
+            color: #4d382b;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            flex: 1;
+        }
+
+        .card .tag {
+            display: inline-block;
+            background: #f9dfcf;
+            border-radius: 50px;
+            padding: 0.2rem 1rem;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: #5f381f;
+            align-self: flex-start;
+        }
+
+        /* 适合人群 + 自然链接段落 */
+        .two-col {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2.2rem 0 1.8rem;
+        }
+
+        .col {
+            flex: 1 1 240px;
+            background: #ffffffd9;
+            padding: 1.8rem 1.6rem;
+            border-radius: 32px;
+            box-shadow: 0 6px 14px rgba(170, 110, 60, 0.06);
+            border: 1px solid #f7dfd1;
+        }
+
+        .col h4 {
+            font-size: 1.3rem;
+            color: #553723;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .col ul li {
+            padding: 0.4rem 0;
+            color: #4b3426;
+            display: flex;
+            align-items: baseline;
+            gap: 0.4rem;
+        }
+
+        .col ul li::before {
+            content: "✦";
+            color: #c98151;
+            font-size: 1rem;
+            margin-right: 0.4rem;
+        }
+
+        .col p {
+            color: #3f2d1f;
+            line-height: 1.7;
+        }
+
+        .col a {
+            color: #954f2b;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 2px solid #e7b394;
+            transition: 0.15s;
+        }
+
+        .col a:hover {
+            background-color: #fae1cf;
+            border-bottom-color: #a5532a;
+        }
+
+        /* 提示 / FAQ 摘要 */
+        .insight-box {
+            margin: 2rem 0 1.5rem;
+            background: #faefe7;
+            border-radius: 40px;
+            padding: 1.5rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.2rem;
+        }
+
+        .insight-box p {
+            color: #4f3422;
+            font-size: 0.98rem;
+            line-height: 1.6;
+            flex: 3;
+            min-width: 200px;
+        }
+
+        .insight-box .pill {
+            background: white;
+            border-radius: 60px;
+            padding: 0.4rem 1.8rem;
+            font-weight: 500;
+            color: #6a3f24;
+            border: 1px solid #dbaa88;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            box-shadow: 0 2px 0 #d09a76;
+        }
+
+        /* 底部 */
+        .footer-note {
+            text-align: center;
+            margin-top: 2.2rem;
+            padding-top: 1.4rem;
+            border-top: 2px solid #edd6c5;
+            color: #634b38;
+            font-size: 0.9rem;
+        }
+
+        .footer-note a {
+            color: #874f2d;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dashed #c6906e;
+        }
+
+        .footer-note a:hover {
+            border-bottom-style: solid;
+        }
+
+        @media (max-width: 680px) {
+            .page-card {
+                padding: 2rem 1rem;
+                border-radius: 32px;
+            }
+
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .visual-item {
+                font-size: 0.9rem;
+                padding: 0.8rem 1.6rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .two-col {
+                flex-direction: column;
+            }
+
+            .insight-box {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-card">
+
+    <!-- hero -->
+    <div class="hero">
+        <h1>华体会</h1>
+        <p>一处把运动热忱与日常灵感连缀起来的空间。在这里，节奏、活力与沉静彼此滋养。</p>
+    </div>
+
+    <!-- 主视觉暖色装饰 -->
+    <div class="visual-strip">
+        <span class="visual-item">🏃 自由奔跑</span>
+        <span class="visual-item">🏸 协作与专注</span>
+        <span class="visual-item">🧘 内在平衡</span>
+    </div>
+
+    <!-- 用途卡片 -->
+    <div class="section-title">在<span style="background: linear-gradient(120deg, #f6d7c0, #fadbc8); padding: 0 6px;">华体会</span>，你可以</div>
+    <div class="card-grid">
+        <div class="card">
+            <h3>探索运动项目</h3>
+            <p>从团队竞技到个人挑战，从户外畅跑到室内训练，每一种形式都藏着新的乐趣。</p>
+            <span class="tag">⚡ 持续更新</span>
+        </div>
+        <div class="card">
+            <h3>获取灵感内容</h3>
+            <p>训练心得、热身技巧、恢复建议，用温和的方式陪伴你的每一次练习。</p>
+            <span class="tag">📘 实用笔记</span>
+        </div>
+        <div class="card">
+            <h3>找到同频伙伴</h3>
+            <p>在社群氛围中彼此鼓励，分享进步与日常，让坚持不再孤单。</p>
+            <span class="tag">🤝 真实互动</span>
+        </div>
+        <div class="card">
+            <h3>沉淀运动习惯</h3>
+            <p>不追求速成，更关注可持续的节奏。小步积累，慢慢成为生活的一部分。</p>
+            <span class="tag">🌱 长期主义</span>
+        </div>
+    </div>
+
+    <!-- 适合人群 + 自然链接段落 -->
+    <div class="two-col">
+        <div class="col">
+            <h4>适合这样的你</h4>
+            <ul>
+                <li>刚开始尝试规律运动，需要温和引导</li>
+                <li>有一定基础，想寻找更多元的练习角度</li>
+                <li>喜欢阅读运动相关的内容与故事</li>
+                <li>希望在一处安静的角落整理自己的运动日志</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h4>不只是信息</h4>
+            <p>
+                很多人最初是被「运动」这两个字吸引过来，后来发现这里更像一个可以随时歇脚、翻翻内容的小站。
+                如果你也喜欢在训练前浏览几段小文章，或者偶尔看看别人的训练日常，那么
+                <a href="https://index-huatihui.com">华体会</a>
+                或许会合你的口味。这里没有嘈杂的推送，只有平实的分享和一点点来自运动本身的温度。
+            </p>
+            <p style="margin-top: 0.8rem;">
+                页面上的每一张卡片、每一段文字，都是围绕「运动与生活如何自然地融合」而展开的。
+            </p>
+        </div>
+    </div>
+
+    <!-- 提示/FAQ摘要 -->
+    <div class="insight-box">
+        <p>
+            💡 不少常客提到，他们最喜欢在傍晚打开这个页面，看看有没有新内容。
+            不需要注册，不需要下载，只是安静地读一读，然后合上电脑去跑个步。
+        </p>
+        <span class="pill">常见疑问 · 随缘解答</span>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer-note">
+        <span>由运动与文字编织 · </span>
+        <a href="https://index-huatihui.com">华体会</a>
+        <span> · 保持温和与热忱</span>
+    </div>
+
+</div>
+</body>
+</html>
