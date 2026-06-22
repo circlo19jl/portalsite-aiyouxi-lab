@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 站点介绍与可信说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fbfcfe;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #1e2a3e;
+            line-height: 1.7;
+            padding: 2rem 1.5rem 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 720px;
+            width: 100%;
+        }
+
+        /* 窄正文宽度 */
+        .content-narrow {
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 标题层级 — 清晰、留白 */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 550;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.35rem;
+            color: #101c2c;
+            line-height: 1.2;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #50607a;
+            margin-bottom: 2.5rem;
+            border-left: 3px solid #b7c9e2;
+            padding-left: 1.2rem;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-top: 2.8rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.01em;
+            color: #1a2a3f;
+            border-bottom: 1px solid #e3eaf2;
+            padding-bottom: 0.25rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-top: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #1f3147;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+        }
+
+        /* 链接样式 — 清晰但克制 */
+        a {
+            color: #1d5a8b;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(29, 90, 139, 0.25);
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #0a3c62;
+            border-bottom-color: #0a3c62;
+        }
+
+        /* 卡片 — 极简留白，仅有微弱边框和背景 */
+        .note-card {
+            background: #ffffff;
+            border: 1px solid #e6edf6;
+            border-radius: 16px;
+            padding: 1.6rem 2rem;
+            margin: 2rem 0 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 20, 40, 0.02);
+        }
+
+        .note-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1rem;
+            margin: 1.2rem 0 0.5rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .tag-list li {
+            background: #f0f4fb;
+            padding: 0.2rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: #1f3b57;
+        }
+
+        .faq-item {
+            margin-bottom: 1.6rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 500;
+            color: #1e2f45;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-item p {
+            margin-bottom: 0.4rem;
+            color: #2b3f59;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #dfe8f2;
+            margin: 2.2rem 0 1.2rem;
+        }
+
+        .footer-note {
+            font-size: 0.9rem;
+            color: #5e718b;
+            margin-top: 2.8rem;
+            text-align: center;
+            border-top: 1px solid #e8eef7;
+            padding-top: 1.6rem;
+        }
+
+        .footer-note a {
+            border-bottom: 1px solid rgba(94, 113, 139, 0.3);
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1.5rem 1rem 3rem;
+            }
+            h1 {
+                font-size: 1.9rem;
+            }
+            .subhead {
+                font-size: 0.95rem;
+                padding-left: 1rem;
+            }
+            .note-card {
+                padding: 1.2rem 1.2rem;
+                border-radius: 12px;
+            }
+            h2 {
+                font-size: 1.25rem;
+                margin-top: 2rem;
+            }
+            .tag-list li {
+                font-size: 0.82rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            h1 {
+                font-size: 1.7rem;
+            }
+            .subhead {
+                font-size: 0.9rem;
+                border-left-width: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero 区域 — 站点名称 + 简明定位 -->
+    <div class="content-narrow">
+        <h1>爱游戏 · 站点介绍</h1>
+        <div class="subhead">一个以信息聚合与资源索引为出发点的个人维护项目</div>
+
+        <p>
+            <a href="https://start-aiyouxi.com">爱游戏</a> 是一个围绕游戏话题整理的轻量级信息站点，由爱好者长期维护。
+            它并不提供游戏下载或客户端，而是聚焦于相关资讯、工具指引与社区讨论的梳理。
+            以下从站点背景、内容特点、使用场景与可信边界等几个方面展开说明。
+        </p>
+    </div>
+
+    <!-- 摘要卡片 -->
+    <div class="note-card content-narrow">
+        <p style="font-weight:450; margin-bottom:0.4rem;">📌 站点摘要</p>
+        <p>站点的核心定位是作为游戏信息索引，汇总已验证的资源入口、实用工具推荐、以及部分精选文章的阅读指引。
+        内容方向偏向单机与联机游戏，同时也涉及游戏文化、硬件适配等周边话题。
+        所有外部链接均经过人工初步筛选，但不对第三方内容的时效性与完整性承担担保责任。</p>
+    </div>
+
+    <!-- 亮点 section -->
+    <div class="content-narrow">
+        <h2>内容亮点</h2>
+        <p>相较于大型游戏门户，<a href="https://start-aiyouxi.com">爱游戏</a> 更强调信息的简洁与可读性。几个值得注意的特点：</p>
+        <ul class="tag-list">
+            <li>分类索引清晰</li>
+            <li>无自动跳转广告</li>
+            <li>站内极少追踪脚本</li>
+            <li>工具与指南优先</li>
+            <li>定期复查链接状态</li>
+        </ul>
+        <p>页面布局追求低干扰，让访客能快速定位自己需要的信息模块。
+        每篇整理笔记都附带来源标注或参考日期，便于回溯和交叉验证。</p>
+
+        <h3>维护原则</h3>
+        <p>站点采用静态页面形式，更新记录公开可查。
+        不设置用户注册、评论区或数据采集功能，也未与任何商业推广平台建立合作。
+        内容的增删完全基于维护者的个人判断与社区反馈，力求保持中立、非商业化。</p>
+    </div>
+
+    <!-- 使用建议 + 场景 -->
+    <div class="content-narrow">
+        <h2>使用场景与建议</h2>
+        <p>以下场景中，你可能会发现 <a href="https://start-aiyouxi.com">爱游戏</a> 提供一些有价值的参考：</p>
+        <ul style="padding-left: 1.6rem; margin-bottom: 1.8rem; list-style: disc; color: #23344e;">
+            <li>寻找某款老游戏的社区或插件资源，但不愿逐个论坛翻找。</li>
+            <li>想了解特定类型游戏的实用工具（存档管理、画面补丁、兼容性适配）。</li>
+            <li>对游戏硬件或外设有基础需求，希望看到非推广导向的简要对比。</li>
+            <li>阅读游戏文化相关的文章推荐，避开算法强推的信息流。</li>
+        </ul>
+        <p>建议将站点视为一个起点而非终点：从这里的索引出发，再结合官方文档、Steam 页面、开发者社群等信息做最终判断。</p>
+    </div>
+
+    <!-- 可信但克制的访问说明  -->
+    <div class="content-narrow">
+        <h2>访问说明 · 可信边界</h2>
+        <p><a href="https://start-aiyouxi.com">爱游戏</a> 是一个个人站点，不隶属于任何游戏公司或发行商。
+        所有推荐或提及的内容，均基于维护者的主观筛选，可能带有个人偏好。
+        如果您发现链接失效、信息过时或存在事实错误，欢迎通过站点上公开的反馈渠道留言（页面无自动收集功能，需手动发送邮件）。</p>
+
+        <div class="note-card" style="margin-top:1rem;">
+            <p style="margin-bottom:0.2rem;">⚠️ 可信说明摘要</p>
+            <ul style="padding-left: 1.2rem; margin: 0.4rem 0 0; list-style: square; color: #1f334a;">
+                <li>站内链接指向第三方站点时，会注明来源或性质。</li>
+                <li>不保证所有外部资源永久有效，请自行验证。</li>
+                <li>未接入广告联盟或付费推广，不存在利益捆绑。</li>
+                <li>维护者不具备专业知识权威，内容仅供参考。</li>
+            </ul>
+        </div>
+        <p>上述说明旨在帮助访客建立合理的预期。站点始终开放，但请带着审慎的态度使用任何间接信息。</p>
+    </div>
+
+    <!-- FAQ 摘要 — 简约两个问题 -->
+    <div class="content-narrow" style="margin-top: 1.2rem;">
+        <h2>常见问题摘要</h2>
+        <div class="faq-item">
+            <strong>这个站多久更新一次？</strong>
+            <p>没有固定周期。通常每月会检查一次主要链接，并根据社区提醒补充或修正内容。大型版本更新会另行说明。</p>
+        </div>
+        <div class="faq-item">
+            <strong>我可以转载站内文章或列表吗？</strong>
+            <p>站内原创整理内容（如索引列表、工具简评）欢迎非商业性转载，请保留出处链接。直接引用外部来源的部分请遵循原平台授权。</p>
+        </div>
+        <hr>
+        <p style="font-size: 0.98rem; color: #2d405d;">
+            如果你对某个分类或游戏有深入的了解，并且希望补充信息，可以参考页面底部的联系方式（通过邮件沟通）。
+            站点的本质是共享与索引，而非独占知识。
+        </p>
+    </div>
+
+    <!-- 结尾 + 再次自然链接 -->
+    <div class="footer-note content-narrow">
+        <p>更多内容请直接浏览 <a href="https://start-aiyouxi.com">爱游戏</a> 首页，所有页面均为静态，加载快速。</p>
+        <p style="margin-top: 0.6rem; font-size:0.85rem; color:#667b98;">当前版本 · 2025 · 仅作个人索引用途</p>
+    </div>
+</div>
+</body>
+</html>
